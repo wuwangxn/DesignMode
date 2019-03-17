@@ -3,11 +3,12 @@ package com.xningf.designmode.Singleton;
 import com.sun.deploy.util.StringUtils;
 
 public class Singleton {
-    private static String singleton;
+
+    static class sing{
+        public static String singleton = "gingleton";
+    }
 
     public static String getSingleton() {
-        if (singleton == null || singleton == "")
-            singleton = "singleton";
-        return singleton;
+        return sing.singleton;
     }
 }
